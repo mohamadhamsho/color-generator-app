@@ -1,0 +1,129 @@
+header{
+  background-color: #282c34;
+  padding: 20px 0;
+}
+header > div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .title{
+  color: #fff;
+}
+
+header input:focus{
+  outline: none;
+}
+header input{
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #282c34;
+  background-color: #eee;
+  transition: all .3s ease;
+}
+header .btn{
+  padding: 5px;
+  width: 100px;
+}
+@media (min-width: 600px) {
+  header .btn{
+    width: 130px;
+  }
+}
+header input.error{
+  border: 2px solid red;
+  animation: error .5s ease-in-out forwards;
+}
+@keyframes error {
+  0%{
+    transform: translateX(10px);
+  }
+  10%{
+    transform: translateX(-10px);
+  }
+  20%{
+    transform: translateX(10px);
+  }
+  30%{
+    transform: translateX(-10px);
+  }
+  50%{
+    transform: translateX(10px);
+  }
+  80%{
+    transform: translateX(-10px);
+  }
+  90%{
+    transform: translateX(10px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+.colors-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.colors-container .item{
+  cursor: pointer;
+}
+.colors-container .item p {
+  margin: 0;
+}
+@media (min-width: 600px) {
+  header input{
+    margin: 0 15px;
+  }
+  .colors-container .item p {
+    margin: 10px 0;
+  }
+}
+@media (min-width: 600px) {
+  .colors-container .item{
+    width: 20%;
+    height: 160px;
+  }
+  .app-container{
+    flex-direction: row;
+  }
+}
+@media (min-width: 1000px) {
+  .colors-container .item{
+    width: 16.66666%;
+    height: 177px;
+  }
+}
+@media (max-width: 600px) {
+  .colors-container .item{
+    width: 33.33333%;
+    height: 130px;
+  }
+  .app-container{
+    flex-direction: column;
+  }
+}
+.copy-text{
+  text-align: center;
+  width: fit-content;
+  border-radius: 3px;
+  margin: 10px auto;
+  padding: 0 5px;
+  font-size: 13px;
+  transform: translateY(10px);
+}
+@media (min-width: 600px) {
+  .copy-text{
+    font-size: 16px;
+  } 
+}
+.color-light{
+  color: #ddd;
+  background-color: #dddddd42;
+}
+.color-dark{
+  color: #333;
+  background-color: #33333342;
+}
